@@ -1,2 +1,2 @@
 export { addTrackToPlaylist, deleteTrackFromPlaylist, fetchAllTracks } from './track';
-export { fetchPlaylist } from './playlist';
+export { addPlaylist, fetchPlaylist } from './playlist';
