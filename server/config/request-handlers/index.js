@@ -1,1 +1,1 @@
-export { addTrackToPlaylist, deleteTrackFromPlaylist, fetchAllTracks } from './track-request-handlers';
+export { addTrackToPlaylist, deleteTrackFromPlaylist, fetchAllTracks } from './track';
