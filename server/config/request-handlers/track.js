@@ -1,11 +1,11 @@
-export const addTrackToPlaylist = (req, res) => {
+export function addTrackToPlaylist(req, res) {
   res.sendStatus(200);
 };
 
-export const deleteTrackFromPlaylist = (req, res) => {
+export function deleteTrackFromPlaylist(req, res) {
   res.sendStatus(200);
 };
 
-export const fetchAllTracks = (req, res) => {
+export function fetchAllTracks(req, res) {
   res.sendStatus(200);
 };
