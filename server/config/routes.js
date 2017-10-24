@@ -1,4 +1,4 @@
-import { addPlaylist, addTrackToPlaylist, deleteTrackFromPlaylist, fetchAllTracks, fetchPlaylist } from './request-handlers';
+import { addPlaylist, addTrackToPlaylist, deleteTrackFromPlaylist, fetchAllTracks, fetchPlaylist } from '../request-handlers';
 
 export default (app, express) => {
   // playlist
