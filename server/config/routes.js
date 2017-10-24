@@ -1,6 +1,12 @@
+import { addTrackToPlaylist } from './request-handlers';
+import { deleteTrackFromPlaylist } from './request-handlers';
+import { fetchAllTracks } from './request-handlers';
+
 export default (app, express) => {
-  app.post('/playlist/:id', (req, res, next) => {
-    console.log(req.body.title);
-    next();
-  });
-}
+  app.post('/playlist/:playlistId', addTrackToPlaylist);
+  app.delete('/playlist/:playlistId/track/:trackId', deleteTrackFromPlaylist);  
+  app.get('/playlist/:playlistId', (req, res) => {
+    res.sendStatus(200);
+  });  
+  app.get('/tracks', fetchAllTracks)
+;}
