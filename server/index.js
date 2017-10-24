@@ -1,7 +1,10 @@
 import express from 'express';
+import routes from './config/routes';
 
 const app = express();
 
-app.get('/', (req, res) => res.send('Hello, World'));
+routes(app, express);
 
 app.listen(8000, () => console.log('Listening on port 8000'));
+
+export default app;
