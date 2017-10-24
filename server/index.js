@@ -8,7 +8,7 @@ const app = express();
 middleware(app, express);
 routes(app, express);
 
-const mongoUri = 'mongodb://127.0.0.1/smitten-mixtape-revisited';
+const mongoUri = '127.0.0.1';
 mongoose.connect(mongoUri);
 
 const db = mongoose.connection;
