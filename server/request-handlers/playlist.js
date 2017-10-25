@@ -11,16 +11,18 @@ export function addPlaylist(req, res) {
       res.status(200).json(playlist);
     })
     .catch(error => {
+      console.error('Unable to add playlist');
       res.status(500).json(error);
     });
 }
 
 export function fetchPlaylist(req, res) {
-  // extract playlist ID from request params
-  // grab playlist from database using ID
-  // status 200
-  // send as response
-  // if playlist not found
-    // status 500
-    // 'unable to fetch playlist'
+  Playlist.findOne({ _id: req.params.playlistId })
+    .then(playlist => {
+      res.status(200).json(playlist);
+    })
+    .catch(error => {
+      console.error('Unable to fetch playlist');
+      res.status(500).json(error);
+    });
 }
