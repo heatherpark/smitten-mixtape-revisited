@@ -1,12 +1,18 @@
+import mongoose from 'mongoose';
+import Playlist from '../database/models/Playlist';
+
+mongoose.Promise = Promise;
+
 export function addPlaylist(req, res) {
-  // extract playlist name from request body
-  // save playlist to database
-  // database will set default value of playlist to an empty array
-  // status 200
-  // send playlist object as response
-  // if unable to save playlist to database
-    // status 500
-    // 'unable to add playlist'
+  const { name } = req.body;
+  
+  Playlist.create({ name })
+    .then(playlist => { 
+      res.status(200).json(playlist);
+    })
+    .catch(error => {
+      res.status(500).json(error);
+    });
 }
 
 export function fetchPlaylist(req, res) {
