@@ -1,3 +1,8 @@
+import mongoose from 'mongoose';
+import Track from '../database/models/Track';
+
+mongoose.Promise = Promise;
+
 export function addTrackToPlaylist(req, res) {
   // extract necessary information from request body and params
   // add track to track library in database
