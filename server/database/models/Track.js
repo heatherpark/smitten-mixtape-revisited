@@ -9,4 +9,4 @@ const trackSchema = new mongoose.Schema({
   duration: Number
 });
 
-export default mongoose.model('Playlist', trackSchema);
+export default mongoose.model('Track', trackSchema);
