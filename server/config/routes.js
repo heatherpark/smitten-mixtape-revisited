@@ -2,7 +2,7 @@ import * as requestHandlers from '../request-handlers';
 
 export default (app, express) => {
   // playlist
-  app.post('/playlist/:playlistId', requestHandlers.addPlaylist);
+  app.post('/playlist', requestHandlers.addPlaylist);
   app.get('/playlist/:playlistId', requestHandlers.fetchPlaylist);  
 
   // tracks
