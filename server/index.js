@@ -8,8 +8,8 @@ const app = express();
 middleware(app, express);
 routes(app, express);
 
-db.on('err', console.error.bind(console, 'database connection error'));
-db.once('open', () => { console.log('Mongodb connection open'); });
+db.on('err', () => console.error('database connection error'));
+db.once('open', () => console.log('Mongodb connection open'));
 
 app.listen(8000, () => console.log('Listening on port 8000'));
 
